@@ -1,0 +1,76 @@
+<div class="block">
+    <div class="card">
+      <div class="card-content">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form [formGroup]="usersGroup"  (submit)="submitData()" class="box">
+
+            <div class="field">
+                <label class="label">Mobile</label>
+                <div class="control">
+                  <input type="text" id="mobile" name="mobile" size="128" formControlName="mobile" class="input" required>
+                </div>
+
+                <span *ngIf="(f.mobile.touched || submit) && f.mobile.errors.required"
+          class="tag is-danger is-light">Mobile number is required</span>
+          <span *ngIf="(f.mobile.touched || submit) && f.mobile.errors.pattern" class="tag is-danger is-light">Mobile number Is
+            Invalid</span>
+
+            </div>
+
+            <div class="field">
+              <label class="label">Firstname</label>
+              <div class="control">
+                <input type="text" name="firstname" formControlName="firstname" class="input" size="128" required>
+              </div>
+              <span *ngIf="(f.firstname.touched || submit) && f.firstname.errors.required"
+          class="tag is-danger is-light">First Name Is Required</span>
+            </div>
+
+            <div class="field">
+                <label class="label">Lastname</label>
+                <div class="control">
+                  <input type="text" name="lastname" formControlName="lastname" class="input" size="128" required>
+                </div>
+                <span *ngIf="(f.lastname.touched || submit) && f.lastname.errors.required"
+          class="tag is-danger is-light">Last Name Is Required</span>
+              </div>
+  
+            <div class="field">
+              <label class="label">E-mail</label>
+              <div class="control">
+                <input type="text"  name="email" size="128" formControlName="email" class="input" required>
+              </div>
+              <span *ngIf="(f.email.touched || submit) && f.email.errors.required" class="tag is-danger is-light">E-mail Is
+                Required</span>
+              <span *ngIf="(f.email.touched || submit) && f.email.errors.email" class="tag is-danger is-light">E-mail Is
+                Invalid</span>
+            </div>            
+
+            <div class="field">
+                <label class="label"> </label>
+                <div class="control">
+                  <label class="radio">
+                    <input type="radio" name="gender" formControlName="gender" value="1">
+                    Male
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="gender" formControlName="gender" value="0">
+                    Female
+                  </label>
+                </div>
+              </div>
+                
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" (click)="submitData()">Register</button>
+              </div>    
+              <div class="control">
+                <button type="button" class="button is-link" (click)="login()">Login</button>
+              </div>            
+            </div>
+  
+          </form>       
+        </div>
+      </div>
+    </div>
+  </div>

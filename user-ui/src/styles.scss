@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+
+
+$yellow: #ffbf00;
+$green: #07747E;
+// $primary: #002366;
+$footer-background-color: $yellow;
+$footer-padding: 0.75rem 0.75rem 0.75rem;
+$fullhd-enabled: true;
+
+@import "../node_modules/bulma/bulma.sass";
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+.is-green {
+  color: $green;
+}
+
+
+
+.box{
+  border-radius: 0px;
+}
+
